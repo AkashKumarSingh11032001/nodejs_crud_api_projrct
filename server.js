@@ -32,7 +32,7 @@ const server = http.createServer((req, res) => {
       deleteReq(req, res);
       break;
     default:
-      res.statusCode = 200;
+      res.statusCode = 404;
       res.setHeader("Content-Type", "application/json");
       res.write(
         JSON.stringify({ title:"Not Found", message: "Route not found!" })
